@@ -12,6 +12,8 @@ import { Dark } from "./styles/Themes";
 import 'locomotive-scroll/dist/locomotive-scroll.css'
 import { AnimatePresence } from 'framer-motion';
 import ScrollTriggerProxy from './components/ScrollTriggerProxy';
+import Education from './pages/Education';
+import Skills from './pages/Skills';
 
 const Main = styled.main`
 
@@ -70,7 +72,7 @@ function App() {
           }
           containerRef={containerRef}
         >
-          <ScrollTriggerProxy />
+          {/* <ScrollTriggerProxy /> */}
           <AnimatePresence>
             <Main className='App' showNav={showNav} data-scroll-container ref={containerRef}>
               {
@@ -83,7 +85,8 @@ function App() {
                     <About />
                     <Experience />
                     <Portfolio />
-                    <About />
+                    <Education />
+                    <Skills />
                   </Content>
               }
             </Main>

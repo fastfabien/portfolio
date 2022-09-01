@@ -4,12 +4,12 @@ import wibestudio from '../assets/img/wibe-studio.webp'
 
 const PortfolioContainer = styled.section`
     padding: 5rem;
-    background-color: ${props => props.theme.white};
     margin: 0 auto;
     position: relative;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
+    background-color: ${props => props.theme.white};
 
 `
 

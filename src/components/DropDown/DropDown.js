@@ -25,7 +25,7 @@ const DropDownHeader = styled.div`
         line-height: 1.2;
     }
     span:last-child{
-        transform: scaleX(3)
+        transform: scale(1)
     }
 
 `
@@ -53,7 +53,9 @@ const DropDown = ({ children, title, date, id }) => {
         <DropDownContainer>
             <DropDownHeader onClick={() => setClick(!click)}>
                 <span>{title}</span>
-                <span>-</span>
+                {
+                    click ? <span>-</span> : <span>+</span>
+                }
             </DropDownHeader>
             {
                 click ?

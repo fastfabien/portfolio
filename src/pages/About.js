@@ -6,6 +6,7 @@ const AboutContainer = styled.section`
     height: 100vh;
     padding: 5rem;
     line-height: 2;
+    background-color: ${props => props.theme.white};
 
     p {
         font-size: font-size: ${props => props.theme.fontxl};
