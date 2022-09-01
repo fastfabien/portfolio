@@ -1,5 +1,5 @@
 import emailjs  from '@emailjs/browser'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
 import Button from '../components/custom-button/button.components'
 import Input from '../components/custom-form/form'
@@ -49,6 +49,9 @@ const ContactHeader = styled.h3`
 `
 
 const Contact = () => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -56,6 +59,9 @@ const Contact = () => {
         emailjs.sendForm('service_24cijod', 'template_8l69mht', form.current, 'SvXP1VSH-vwiOPxXQ')
             .then((result) => {
                 console.log(result.text);
+                setName("")
+                setEmail("")
+                setMessage("")
             }, (error) => {
                 console.log(error.text);
             });
@@ -70,9 +76,9 @@ const Contact = () => {
                 Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
             </p>
             <form ref={form} onSubmit={sendEmail} >
-                <Input type="text" placeholder="name" name="from_name" />
-                <Input type="email" placeholder="email" />
-                <Textarea placeholder="message" name="message" />
+                <Input type="text" placeholder="name" name="from_name" onChange={(e) => setName(e.target.value)} />
+                <Input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+                <Textarea placeholder="message" name="message" onChange={(e) => setMessage(e.target.value)} />
                 <Button type="submit">ENVOYER MESSAGE</Button>
             </form>
         </ContactContainer>
