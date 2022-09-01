@@ -70,9 +70,9 @@ const Contact = () => {
                 Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
             </p>
             <form ref={form} onSubmit={sendEmail} >
-                <Input type="text" placeholder="name" />
+                <Input type="text" placeholder="name" name="from_name" />
                 <Input type="email" placeholder="email" />
-                <Textarea placeholder="message" />
+                <Textarea placeholder="message" name="message" />
                 <Button type="submit">ENVOYER MESSAGE</Button>
             </form>
         </ContactContainer>
