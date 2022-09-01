@@ -79,7 +79,6 @@ function App() {
                 <About />
                 <Experience />
                 <Portfolio />
-                <div style={{ 'height': '60vh' }}></div>
                 <About />
               </Content>
             </Main>
