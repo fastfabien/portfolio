@@ -21,6 +21,8 @@ const Main = styled.main`
   padding-top: 5rem;
   overflow: hidden;
 
+  
+
 
 `
 
@@ -74,13 +76,16 @@ function App() {
               {
                 showNav ? <Menu HandleClick={HandleClick} /> : <NavBar HandleClick={HandleClick} />
               }
-              <Content showNav={showNav}>
-                <Introduction />
-                <About />
-                <Experience />
-                <Portfolio />
-                <About />
-              </Content>
+              {
+                showNav ? <Introduction className='Introduction' /> :
+                  <Content showNav={showNav}>
+                    <Introduction />
+                    <About />
+                    <Experience />
+                    <Portfolio />
+                    <About />
+                  </Content>
+              }
             </Main>
           </AnimatePresence>
         </LocomotiveScrollProvider>

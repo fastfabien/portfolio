@@ -1,9 +1,6 @@
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import React, { useLayoutEffect } from 'react'
-import { useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import img from '../assets/img/photo.png'
+import wibestudio from '../assets/img/wibe-studio.webp'
 
 const PortfolioContainer = styled.section`
     padding: 5rem;
@@ -13,10 +10,6 @@ const PortfolioContainer = styled.section`
     min-height: 100vh;
     height: auto;
     overflow: hidden;
-    
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
 
 `
 
@@ -37,122 +30,75 @@ const Title = styled.h2`
     }
 `
 
+
 const ProjetContainer = styled.div`
-  
-  position: absolute;
-  top: 10rem;
-  left: 0;
-  height: 100vh;
+
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 2rem;
-  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
 
 `
 
 const Item = styled.div`
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
     gap: 2rem;
-    width: 50rem;
-    height: auto;
-    padding-bottom: 2rem;
 
     img {
-      width: 20rem;
+      width: 30%;
+      object-fit: cover;
+      height: auto;
     }
     div {
-      width: 20rem;
+      width: 70%;
+      h2 {
+      }
+      p {
+        text-align: justify;
+        margin-top: 2rem;
+        line-height: 1.5;
+      }
+
+      a {
+        text-decoration: underline;
+        font-weight: 700;
+        display: block;
+        margin-top: 2rem;
+        :hover {
+          opacity: .8;
+          transform: scaleY(1.1);
+        }
+      }
     }
 
 `
 
-const Projet = ({ children, image, title }) => {
+const Projet = ({ children, title, link, image }) => {
   return (
     <Item>
-      <img src={image} alt="Projet" />
+      <img src={image} alt={title}/>
       <div>
         <h2>{title}</h2>
         <p>{children}</p>
+        <a href={link} target='_blank' rel="noopener noreferrer">Visiter le site</a>
       </div>
     </Item>
   )
 }
 
 const Portfolio = () => {
-
-  gsap.registerPlugin(ScrollTrigger);
-  const ref = useRef(null)
-  const horizontalRef = useRef(null)
-  useLayoutEffect(() => {
-    let element = ref.current;
-    let scrollingElement = horizontalRef.current;
-    let pinWrapWidth = scrollingElement.offsetWidth;
-    var t1 = gsap.timeline();
-
-    setTimeout(() => {
-      t1.to(element, {
-        scrollTrigger: {
-          trigger: element,
-          start: `top top`,
-          end: pinWrapWidth,
-          scroller: '.App', // locomotive element
-          scrub: true,
-          pin: true,
-          markers: true,
-        },
-        // We have to increase scrolling height of this element same as the scrolling element width
-        height: `${scrollingElement.scrollWidth}px`,
-        ease: 'none'
-      })
-
-      // Horizontal Scroll
-      t1.to(scrollingElement, {
-        scrollTrigger: {
-          trigger: scrollingElement,
-          start: 'top top',
-          end: pinWrapWidth,
-          scroller: '.App', // locomotive element
-          scrub: true,
-          // markers: true,
-        },
-        // We have to increase scrolling height of this element same as the scrolling element width
-        x: -pinWrapWidth,
-        ease: 'none'
-      })
-      ScrollTrigger.refresh();
-    }, 2000)
-
-    return () => {
-      // Let's clear instance 
-    }
-  }, [])
-
-
-
   return (
-    <PortfolioContainer ref={ref}>
+    <PortfolioContainer>
       <Title>Portfolio</Title>
-      <ProjetContainer ref={horizontalRef}>
-        <Projet image={img} title="Mandona">
-          We are very dedicated to making our products.
-          We offer unique and creative products to a wide range of people.
-          We have a variety of styles, but for most people, all of the options are in the box.
-          We specialize in making things that make you happy.
+      <ProjetContainer>
+        <Projet title="Wibe Studio" link="https://cutt.ly/RCuqVQs" image={wibestudio}>
+          Ceci est une de mes recente projet réalisé avec React, framer-motion, gsap, locomitive scroll et styled-component
         </Projet>
-        <Projet image={img} title="Mandona">
-          We are very dedicated to making our products.
-          We offer unique and creative products to a wide range of people.
-          We have a variety of styles, but for most people, all of the options are in the box.
-          We specialize in making things that make you happy.
-        </Projet>
-        <Projet image={img} title="Mandona">
-          We are very dedicated to making our products.
-          We offer unique and creative products to a wide range of people.
-          We have a variety of styles, but for most people, all of the options are in the box.
-          We specialize in making things that make you happy.
+        <Projet title="Wibe Studio" link="https://cutt.ly/RCuqVQs" image={wibestudio}>
+          Ceci est une de mes recente projet réalisé avec React, framer-motion, gsap, locomitive scroll et styled-component
         </Projet>
       </ProjetContainer>
     </PortfolioContainer>
