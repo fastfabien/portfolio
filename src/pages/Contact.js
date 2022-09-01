@@ -52,19 +52,18 @@ const Contact = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
-    const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_24cijod', 'template_8l69mht', form.current, 'SvXP1VSH-vwiOPxXQ')
+        emailjs.sendForm('service_24cijod', 'template_8l69mht', e.target, 'SvXP1VSH-vwiOPxXQ')
             .then((result) => {
                 console.log(result.text);
-                setName("")
-                setEmail("")
-                setMessage("")
             }, (error) => {
                 console.log(error.text);
             });
+            setName("")
+            setEmail("")
+            setMessage("")
     }
     return (
         <ContactContainer>
@@ -75,9 +74,9 @@ const Contact = () => {
             <p>
                 Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
             </p>
-            <form ref={form} onSubmit={sendEmail} >
-                <Input type="text" placeholder="name" name="from_name" onChange={(e) => setName(e.target.value)} />
-                <Input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+            <form onSubmit={sendEmail} >
+                <Input type="text" placeholder="name" name="name" onChange={(e) => setName(e.target.value)} />
+                <Input type="email" placeholder="email" name="email" onChange={(e) => setEmail(e.target.value)} />
                 <Textarea placeholder="message" name="message" onChange={(e) => setMessage(e.target.value)} />
                 <Button type="submit">ENVOYER MESSAGE</Button>
             </form>
