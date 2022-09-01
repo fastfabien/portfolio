@@ -28,9 +28,9 @@ const CustomButton = styled.button`
       top: 0;
       background-color: ${props => props.theme.white};
       height: 100%;
-      width: 50%;
+      width: 100%;
       z-index: 1;
-      transition: width .5s ease;
+      transition: width .8s ease;
     }
     ::before {
       left: 0;
@@ -42,9 +42,9 @@ const CustomButton = styled.button`
 
 `
 
-const Button = ({children}) => {
+const Button = ({children, type}) => {
   return (
-    <CustomButton>
+    <CustomButton type={type}>
       <span>{children}</span>
     </CustomButton>
   )

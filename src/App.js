@@ -14,6 +14,7 @@ import { AnimatePresence } from 'framer-motion';
 import ScrollTriggerProxy from './components/ScrollTriggerProxy';
 import Education from './pages/Education';
 import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
 const Main = styled.main`
 
@@ -87,6 +88,7 @@ function App() {
                     <Portfolio />
                     <Education />
                     <Skills />
+                    <Contact />
                   </Content>
               }
             </Main>
