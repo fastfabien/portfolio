@@ -110,7 +110,9 @@ const Introduction = () => {
           consectetur quisque lobortis Vitae faucibus diam consequat maecenas
           turpis.
         </p>
-        <Button>Download CV</Button>
+        <Button href="../assets/pdf/file.pdf" download>
+          Download CV
+        </Button>
       </Left>
       <Right data-scroll data-scroll-speed="4">
         <img src={profil} alt="Profil" />
