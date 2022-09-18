@@ -9,7 +9,6 @@ const Hide = styled.div`
     padding: 2em;
     background-color: ${props => props.theme.white};
     border-radius: 50%;
-    cursor: pointer;
     transition: transform .5 ease;
     :hover {
         transform: scale(.9);

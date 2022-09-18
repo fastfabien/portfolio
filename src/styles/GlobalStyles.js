@@ -1,9 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/montserrat";
 
-
-
-const GlobalStyles = createGlobalStyle `
+const GlobalStyles = createGlobalStyle`
     *,*::before,*::after {
         margin: 0;
         padding: 0;
@@ -12,6 +10,7 @@ const GlobalStyles = createGlobalStyle `
     body {
         font-family: "Montserrat";
         overflow-x: hidden;
+        // cursor: none;
     }
 
     h1,h2,h3,h4,h5,h6 {
@@ -24,6 +23,6 @@ const GlobalStyles = createGlobalStyle `
         text-decoration: none;
     }
 
-`
+`;
 
 export default GlobalStyles;

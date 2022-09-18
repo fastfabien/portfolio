@@ -11,7 +11,6 @@ const CustomButton = styled.button`
   color: ${props => props.theme.white};
   font-size: ${props => props.theme.fontmd};
   font-family: 'Montserrat';
-  cursor: pointer;
   position: relative;
   span {
     position: relative;
@@ -23,6 +22,7 @@ const CustomButton = styled.button`
     width: 0;
   }
   :hover {
+    curson: none;
     color: ${props => props.theme.mainBlue};
     ::before, ::after {
       top: 0;

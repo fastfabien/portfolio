@@ -16,7 +16,6 @@ const DropDownHeader = styled.div`
     justify-content: space-between;
     padding: 1rem 0;
     padding-right: .3rem;
-    cursor: pointer;
     span {
         color: ${props => props.theme.white};
         font-family: 'Montserrat';
