@@ -10,6 +10,10 @@ const Section = styled.footer`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 60em) {
+    flex-direction: column;
+  }
 `;
 
 const Social = styled.div`
