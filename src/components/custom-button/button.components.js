@@ -42,9 +42,9 @@ const CustomButton = styled.a`
   }
 `;
 
-const Button = ({ children, type, href }) => {
+const Button = ({ children, type, href, handleClick }) => {
   return (
-    <CustomButton type={type} href={href} download>
+    <CustomButton type={type} href={href} onClick={handleClick}>
       <span>{children}</span>
     </CustomButton>
   );

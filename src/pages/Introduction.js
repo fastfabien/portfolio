@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../components/custom-button/button.components";
 import profil from "../assets/img/photo.png";
+import { saveAs } from "file-saver";
+import cv from "../assets/pdf/file.pdf";
 
 const Landing = styled.section`
   background-color: ${(props) => props.theme.mainBlue};
@@ -98,6 +100,9 @@ const Titre = styled.h1`
 `;
 
 const Introduction = () => {
+  const saveFile = () => {
+    saveAs(cv);
+  };
   return (
     <Landing data-scroll data-scroll-section>
       <Left data-scroll data-scroll-speed="4">
@@ -110,9 +115,7 @@ const Introduction = () => {
           consectetur quisque lobortis Vitae faucibus diam consequat maecenas
           turpis.
         </p>
-        <Button href="../assets/pdf/file.pdf" download>
-          Download CV
-        </Button>
+        <Button handleClick={saveFile}>Download CV</Button>
       </Left>
       <Right data-scroll data-scroll-speed="4">
         <img src={profil} alt="Profil" />
