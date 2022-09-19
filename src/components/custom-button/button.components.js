@@ -11,6 +11,7 @@ const CustomButton = styled.a`
   font-size: ${(props) => props.theme.fontmd};
   font-family: "Montserrat";
   position: relative;
+  curson: pointer;
   span {
     position: relative;
     z-index: 2;
@@ -22,7 +23,6 @@ const CustomButton = styled.a`
     width: 0;
   }
   :hover {
-    curson: none;
     color: ${(props) => props.theme.mainBlue};
     ::before,
     ::after {

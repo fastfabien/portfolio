@@ -18,6 +18,7 @@ const Landing = styled.section`
     flex-direction: column;
     padding: 2rem;
     align-items: unset;
+    padding-bottom: 3rem;
   }
 
   @media (max-width: 70em) {
