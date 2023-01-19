@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CustomButton = styled.a`
+const CustomButton = styled.button`
   background-color: ${(props) => props.theme.transparent};
   padding: 1rem 2rem;
   text-align: center;
