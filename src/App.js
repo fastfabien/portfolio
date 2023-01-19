@@ -32,8 +32,9 @@ const Main = styled.main`
   nav {
     & + section {
       transform: ${(props) =>
-        props.showNav ? "perspective(300px) rotateY(-20deg) scale(.5);" : ";"}
-      transition: transform 1s ease;
+    props.showNav ? "perspective(500px) rotateY(-30deg) scale(.6)!important;" : ";"}
+      transition: margin 1s ease;
+      margin-right: ${(props) => props.showNav ? "3rem;" : "unset;"}
     } 
   }
   
@@ -57,7 +58,7 @@ function App() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    return () => {};
+    return () => { };
   }, [showNav]);
 
   const HandleClick = () => {

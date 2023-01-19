@@ -25,6 +25,33 @@ const List = styled.li`
   font-size: ${(props) => props.theme.fontxxl};
   font-family: "Montserrat";
   color: ${(props) => props.theme.colorBlack};
+  position: relative;
+  opacity: 1;
+  transition: transform .1s ease-in;
+  text-align: center;
+  cursor: pointer;
+  ::after {
+    content: "";
+    width: 0;
+    height: .3rem;
+    background-color: ${(props) => props.theme.colorBlack};
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .1s ease-in;
+  }
+  :hover {
+    transform: scale(1.5);
+    opacity: .8;
+    transition: transform .1s ease-in;
+    font-weight: 800;
+    ::after {
+    width: 100%;
+    transition: width .2s ease-in;
+  }
+  }
 `;
 
 const Menu = ({ HandleClick }) => {

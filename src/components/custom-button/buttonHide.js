@@ -10,6 +10,7 @@ const Hide = styled.div`
     background-color: ${props => props.theme.white};
     border-radius: 50%;
     transition: transform .5 ease;
+    cursor: pointer;
     :hover {
         transform: scale(.9);
         transition: transform .5 ease;
@@ -38,12 +39,12 @@ const Hide = styled.div`
 
 `
 
-const ButtonHide = ({HandleClick}) => {
-  return (
-    <Hide onClick={() => HandleClick()}>
-        <span></span>
-    </Hide>
-  )
+const ButtonHide = ({ HandleClick }) => {
+    return (
+        <Hide onClick={() => HandleClick()}>
+            <span></span>
+        </Hide>
+    )
 }
 
 export default ButtonHide

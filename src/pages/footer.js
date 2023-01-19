@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaFacebookF, FaLinkedinIn, FaGitlab } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGitlab, FaGithub } from "react-icons/fa";
 
 const Section = styled.footer`
   background-color: ${(props) => props.theme.white};
@@ -51,8 +51,15 @@ const Footer = () => {
         >
           <FaGitlab />
         </a>
+        <a
+          href="https://github.com/fastfabien56"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaGithub />
+        </a>
       </Social>
-      © FastFabien
+      © FastFabien 2022
     </Section>
   );
 };
