@@ -47,6 +47,7 @@ const Main = styled.main`
 
 const Content = styled.div`
   width: 80%;
+  max-width: 1000px;
 
   @media (max-width: 60em) {
     width: 100%;

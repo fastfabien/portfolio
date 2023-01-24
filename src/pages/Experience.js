@@ -39,33 +39,24 @@ const Experience = () => {
       <Title>Experience</Title>
       <DropDown
         title="Developpeur Frontend"
-        date="Janvier 2021 - present"
+        date="Janvier 2021 - Decembre 2022"
         id={2}
       >
-        Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu.
-        Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo
-        in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate
-        phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
+        Conception et développement des sites web.
       </DropDown>
       <DropDown
         title="Stage Developpeur Frontend"
         date="Fevrier 2020 - Decembre 2020"
         id={2}
       >
-        Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu.
-        Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo
-        in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate
-        phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
+        Intégration et développement d'un site web en utilisant Ruby on Rails.
       </DropDown>
       <DropDown
         title="Stage Developpeur VB.net"
         date="Octobre 2018 - Fevrier 2019"
         id={3}
       >
-        Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu.
-        Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo
-        in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate
-        phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
+        Conception et développement d'une application pour la géstion de logement administratif.
       </DropDown>
     </ExperienceContainer>
   );

@@ -53,21 +53,17 @@ const About = () => {
   return (
     <AboutContainer data-scroll data-scroll-section>
       <Title data-scroll data-scroll-speed="4" data-scroll-direction="vertical">
-        About
+        À PROPOS
       </Title>
       <AboutHeader
         data-scroll
         data-scroll-speed="4"
         data-scroll-direction="vertical"
       >
-        Dolor sit amet, consectetur adipiscing elit viverra tristique placerat
-        in massa consectetur quisque
+        Je crée des sites web sur mesure avec des belles interfaces pour réaliser vos plus grand projet
       </AboutHeader>
       <p data-scroll data-scroll-speed="4" data-scroll-direction="vertical">
-        Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu.
-        Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo
-        in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate
-        phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
+        Avec moi, votre site se chargera plus vite et peut fonctionner avec different appareil(grand, petit), votre site n'a pas besoin d'être static car j'adore faire vivre les pages
       </p>
     </AboutContainer>
   );

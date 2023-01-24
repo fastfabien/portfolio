@@ -7,6 +7,7 @@ const Container = styled(motion.div)`
   padding-top: 1rem;
   padding-right: 1.5rem;
   animation: AddOpacity 0.5s ease;
+  cursor: pointer;
 
   @keyframe AddOpacity {
     from {

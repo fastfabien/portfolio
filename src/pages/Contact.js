@@ -99,9 +99,6 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setName("");
-    setEmail("");
-    setMessage("");
     SetLoading(true);
     emailjs
       .sendForm(
@@ -113,6 +110,9 @@ const Contact = () => {
       .then(
         (result) => {
           SetMessageColor("green");
+          setName("");
+          setEmail("");
+          setMessage("");
           setSendMessage("Message envoyé avec succèss");
           hideMessage(messages.current);
           SetLoading(false);

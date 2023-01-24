@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../components/custom-button/button.components";
-import profil from "../assets/img/photo.png";
+import profil from "../assets/img/profil.jpeg";
 import { saveAs } from "file-saver";
 import cv from "../assets/pdf/file.pdf";
 
@@ -69,6 +69,8 @@ const Right = styled.div`
     right: -10rem;
     width: 20rem;
     height: 20rem;
+    object-fit: cover;
+    object-position: top;
   }
 
   @media (max-width: 60em) {
@@ -108,13 +110,11 @@ const Introduction = () => {
     <Landing data-scroll data-scroll-section>
       <Left data-scroll data-scroll-speed="4">
         <Titre>
-          Hello <br />
-          I'm John Fast
+          Bonjour <br />
+          Je suis John Fast
         </Titre>
         <p>
-          A full stack allaround designer that tristique est placerat in massa
-          consectetur quisque lobortis Vitae faucibus diam consequat maecenas
-          turpis.
+          Je suis un développeur frontend et intégrateur, et j'adore implementer des belles interfaces utilisateur et j'adore coder tout simplement.
         </p>
         <Button handleClick={saveFile}>Download CV</Button>
       </Left>

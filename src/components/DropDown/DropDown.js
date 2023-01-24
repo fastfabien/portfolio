@@ -22,6 +22,7 @@ const DropDownHeader = styled.div`
         font-weight: 600;
         font-size: ${props => props.theme.fontmd};
         line-height: 1.2;
+        cursor: pointer;
     }
     span:last-child{
         transform: scale(1)
@@ -59,25 +60,25 @@ const DropDown = ({ children, title, date, id }) => {
             {
                 click ?
                     <DropDownBody key={id}
-                    initial={{ height: 0 }}
-                    animate={{ height: 'auto' }}
-                    transition={{ duration: .7 }}
-                    exit={{ height: 0 }}
+                        initial={{ height: 0 }}
+                        animate={{ height: 'auto' }}
+                        transition={{ duration: .7 }}
+                        exit={{ height: 0 }}
                     >
                         <motion.p
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: .5,duration: .3 }}
-                        exit={{ x: -100 }}
-                        
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: .5, duration: .3 }}
+                            exit={{ x: -100 }}
+
 
                         >{date}</motion.p>
                         <motion.p
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: .5,duration: .3 }}
-                        
-                        exit={{ x: -100 }}
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: .5, duration: .3 }}
+
+                            exit={{ x: -100 }}
                         >{children}</motion.p>
                     </DropDownBody>
                     : ''
