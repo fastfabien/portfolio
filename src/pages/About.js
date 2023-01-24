@@ -63,7 +63,7 @@ const About = () => {
         Je crée des sites web sur mesure avec des belles interfaces pour réaliser vos plus grand projet
       </AboutHeader>
       <p data-scroll data-scroll-speed="4" data-scroll-direction="vertical">
-        Avec moi, votre site se chargera plus vite et peut fonctionner avec different appareil(grand, petit), votre site n'a pas besoin d'être static car j'adore faire vivre les pages
+        Avec moi, votre site se chargera plus vite et peut fonctionner avec different appareil(Ordinateur, tablette, android, iphone,...), votre site n'a pas besoin d'être static car j'adore faire vivre les pages.
       </p>
     </AboutContainer>
   );

@@ -131,14 +131,10 @@ const Contact = () => {
     <ContactContainer data-scroll data-scroll-section>
       <Title>Contact</Title>
       <ContactHeader>
-        Dolor sit amet, consectetur adipiscing elit viverra tristique placerat
-        in massa consectetur quisque
+        "Un voyage de mille lieues commence toujours par un premier pas"
       </ContactHeader>
       <p>
-        Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu.
-        Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo
-        in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate
-        phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.
+        Vous avez un projet . Contactez-moi pour en discuter, qui sait c'est peut-être le début de quelque chose de grand.
       </p>
       <form onSubmit={sendEmail} ref={form}>
         <Input

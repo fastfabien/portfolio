@@ -90,8 +90,10 @@ const Skills = () => {
         <Titles>Frontend</Titles>
         <Skill width="90">HTML/CSS</Skill>
         <Skill width="80">LESS/SASS</Skill>
-        <Skill width="70">REACTJS</Skill>
+        <Skill width="60">REACTJS</Skill>
+        <Skill width="50">VUEJS</Skill>
         <Skill width="80">BOOTSTRAP</Skill>
+        <Skill width="60">TAILWINDCSS</Skill>
       </AllSkills>
       <AllSkills>
         <Titles>Backend</Titles>

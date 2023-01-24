@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import wibestudio from "../assets/img/wibe-studio.webp";
+import apple_project from "../assets/img/Hero-section-desktop.png"
+import natours from "../assets/img/nat-1-large.jpg";
 
 const PortfolioContainer = styled.section`
   padding: 5rem;
@@ -113,12 +115,19 @@ const Portfolio = () => {
           gsap, locomitive scroll et styled-component
         </Projet>
         <Projet
-          title="Wibe Studio"
-          link="https://cutt.ly/RCuqVQs"
-          image={wibestudio}
+          title="Apple 3d Landing Page"
+          link="https://cutt.ly/l9jhndW"
+          image={apple_project}
         >
-          Ceci est une de mes recente projet réalisé avec React, framer-motion,
-          gsap, locomitive scroll et styled-component
+          Ceci est une projet réalisé avec ReactJS, ThreeJS,
+          gsap et styled-component
+        </Projet>
+        <Projet
+          title="Natours Project"
+          link="https://cutt.ly/D9jljkE"
+          image={natours}
+        >
+          Ceci est une projet réalisé avec HTML/CSS/SASS
         </Projet>
       </ProjetContainer>
     </PortfolioContainer>
